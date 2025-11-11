@@ -1,1 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Findings | Active Healthy Kids Pakistan</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .findings-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .findings-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .findings-header h1 {
+      color: #006600;
+      margin-bottom: 10px;
+    }
+    .indicator-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .indicator {
+      border: 1px solid #006600;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .indicator-header {
+      background-color: #006600;
+      color: white;
+      padding: 15px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .indicator-header span.grade {
+      background: #fff;
+      color: #006600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .indicator-content {
+      display: none;
+      padding: 20px;
+      background: #f8f8f8;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    .indicator-content.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .indicator-content h3 {
+      color: #004d00;
+      margin-top: 0;
+    }
+    .indicator-content ul {
+      margin: 10px 0 20px;
+      padding-left: 20px;
+    }
+    .indicator-content p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
 
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="logo">
+        <a href="index.html"><img src="assets/images/logo.png" alt="Logo" height="60" /></a>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="findings.html" class="active">Findings</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="findings-container">
+    <div class="findings-header">
+      <h1>Pakistan Report Card 2025</h1>
+      <p>Summary of grades and key findings across all 10 Global Matrix indicators.</p>
+    </div>
+
+    <div class="indicator-list">
+
+      <!-- Indicator 1 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>Overall Physical Activity</span>
+          <span class="grade">D</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Percentage of children and adolescents meeting WHO’s recommendation of at least 60 minutes of moderate-to-vigorous physical activity daily.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Only X% of Pakistani youth meet physical activity guidelines.</li>
+            <li>Boys are generally more active than girls.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Indicator 2 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>Organized Sport Participation</span>
+          <span class="grade">C-</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Proportion of children and adolescents participating in organized sports at least once a week.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Participation is higher among urban boys compared to rural girls.</li>
+            <li>Limited infrastructure and access remain barriers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Indicator 3 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>Active Play</span>
+          <span class="grade">C</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Proportion of children who engage in unstructured active play several times per week.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Traditional games are common but declining in urban settings.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Indicator 4 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>Active Transportation</span>
+          <span class="grade">B</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Proportion of children using active means (walking, cycling) to travel to and from school.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Many children walk to school, especially in rural areas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Indicator 5 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>Sedentary Behaviours</span>
+          <span class="grade">C+</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Proportion of children spending less than 2 hours daily on recreational screen time.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Screen time increasing rapidly in urban populations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Indicator 6 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>Physical Fitness</span>
+          <span class="grade">C</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Average physical fitness levels (cardiorespiratory, muscular strength) relative to international norms.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Limited national data; school-level studies suggest moderate fitness levels.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Indicator 7 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>Family and Peers</span>
+          <span class="grade">C-</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Proportion of parents and peers providing support for physical activity (encouragement, participation, transportation).</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Parental support varies by socioeconomic status.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Indicator 8 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>School</span>
+          <span class="grade">B-</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Proportion of schools offering regular physical education classes and activity opportunities.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>PE classes exist in policy but not consistently implemented.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Indicator 9 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>Community and Environment</span>
+          <span class="grade">C</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Availability and accessibility of community-level facilities supporting physical activity.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Limited safe and inclusive public spaces for play.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Indicator 10 -->
+      <div class="indicator">
+        <div class="indicator-header" onclick="toggleIndicator(this)">
+          <span>Government</span>
+          <span class="grade">C+</span>
+        </div>
+        <div class="indicator-content">
+          <h3>Benchmark</h3>
+          <p>Evidence of leadership, policies, and investments supporting physical activity for children and youth.</p>
+          <h3>Key Findings</h3>
+          <ul>
+            <li>Recent national policies acknowledge physical activity but implementation remains limited.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div> <!-- end indicator list -->
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Active Healthy Kids Pakistan | Hosted on GitHub Pages</p>
+  </footer>
+
+  <script>
+    function toggleIndicator(element) {
+      const content = element.nextElementSibling;
+      content.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
