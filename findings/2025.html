@@ -9,18 +9,57 @@
     body {
       font-family: Arial, sans-serif;
     }
+
+    /* Header nav links bold and white */
+    .site-header {
+      background-color: #000;
+      color: white;
+      padding: 10px 0;
+    }
+    .main-nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-list li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-list li a.active {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #006400, #004d00);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Findings container */
     .findings-container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
-    }
-    .findings-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .findings-header h1 {
-      color: #006600;
-      margin-bottom: 10px;
     }
     .indicator-list {
       display: flex;
@@ -82,7 +121,7 @@
   <header class="site-header">
     <nav class="main-nav">
       <div class="logo">
-        <a href="index.html"><img src="assets/images/logo.png" alt="Logo" height="60" /></a>
+        <a href="index.html"><img src="assets/images/logo.jpg" alt="AHK Pakistan Logo" height="60" /></a>
       </div>
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
@@ -94,12 +133,16 @@
     </nav>
   </header>
 
-  <section class="findings-container">
-    <div class="findings-header">
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="hero-inner">
       <h1>Pakistan Report Card 2025</h1>
       <p>Summary of grades and key findings across all 10 Global Matrix indicators.</p>
     </div>
+  </section>
 
+  <!-- Findings container -->
+  <section class="findings-container">
     <div class="indicator-list">
 
       <!-- Indicator 1 -->
