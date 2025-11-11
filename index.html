@@ -5,16 +5,140 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Active Healthy Kids Pakistan</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Header color */
+    .site-header {
+      background-color: #000; /* black */
+      color: white;
+      padding: 10px 0;
+    }
+    .main-nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .nav-list li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-list li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #006400, #004d00);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .btn-primary {
+      background: white;
+      color: #006400;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      background: #cceccc;
+    }
+
+    /* Announcements Section */
+    .announcements {
+      background: #f9f9f9;
+      padding: 40px 20px;
+    }
+    .announcement-text {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* Indicator Cards Section */
+    .indicators {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    .indicators h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #004d00;
+    }
+    .indicator-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .indicator-card {
+      background: white;
+      border-left: 6px solid #006400;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px 20px;
+      transition: transform 0.2s;
+    }
+    .indicator-card:hover {
+      transform: translateY(-4px);
+    }
+    .indicator-card h3 {
+      color: #006400;
+      margin-bottom: 8px;
+    }
+    .indicator-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* AHK Alliance section */
+    .alliance {
+      background: #eaf5ea;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .alliance a {
+      color: #006400;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .alliance a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      background: #000;
+      color: white;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
 
   <header class="site-header">
     <nav class="main-nav" role="navigation">
       <div class="logo">
-        <!-- Upload your logo at assets/images/logo.png and keep this path -->
         <a href="index.html"><img src="assets/images/logo.jpg" alt="AHK Pakistan Logo" height="60" /></a>
       </div>
-
       <ul class="nav-list" role="menubar" aria-label="Main Navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="findings.html">Findings</a></li>
@@ -28,53 +152,91 @@
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-inner">
       <h1 id="hero-heading">Active Healthy Kids Pakistan Report Card</h1>
-      <p>Assessing physical activity for children and youth in Pakistan — evidence based and globally comparable.</p>
+      <p>Assessing physical activity of children and youth in Pakistan — evidence-based and globally comparable.</p>
       <a class="btn-primary" href="findings.html">View Key Findings</a>
     </div>
   </section>
 
-  <section class="announcements" aria-label="Latest announcements">
-    <h2 style="text-align:center; margin-bottom:12px;">Latest Announcement</h2>
-    <div class="carousel">
-      <!-- Add announcement images in assets/images/ and update the src -->
-      <img src="assets/images/announcement1.jpg" alt="Announcement 1" />
-      <img src="assets/images/announcement2.jpg" alt="Announcement 2" />
-      <img src="assets/images/announcement3.jpg" alt="Announcement 3" />
+  <section class="announcements">
+    <h2 style="text-align:center;">Latest Announcement</h2>
+    <div class="announcement-text">
+      <p><strong>📢 November 2025:</strong> Pakistan joins the Global Matrix 6.0 initiative led by the <a href="https://www.activehealthykids.org/5-0/" target="_blank">Active Healthy Kids Global Alliance</a> to assess physical activity indicators for children and youth.</p>
+      <p><strong>🗓 Upcoming:</strong> National dissemination event and stakeholder workshop to discuss results and strategies for action.</p>
     </div>
   </section>
 
-  <section class="introduction">
-    <h2>Welcome to Active Healthy Kids Pakistan</h2>
-    <p style="margin-top:10px;">This report card provides grades across multiple indicators of physical activity for children and adolescents in Pakistan.</p>
+  <section class="indicators">
+    <h2>Physical Activity Indicators</h2>
+    <div class="indicator-grid">
+      <div class="indicator-card">
+        <h3>🏃‍♂️ Overall Physical Activity</h3>
+        <p>Proportion of children and adolescents meeting recommended levels of daily moderate-to-vigorous physical activity.</p>
+      </div>
 
-    <div class="grades-snapshot" aria-labelledby="grades-heading">
-      <h3 id="grades-heading" style="margin-top:12px;">202X Grades</h3>
-      <table>
-        <thead>
-          <tr><th>Indicator</th><th>Grade</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Overall Physical Activity</td><td>D-</td></tr>
-          <tr><td>Organized Sport & Physical Activity</td><td>B-</td></tr>
-          <tr><td>Active Play</td><td>D</td></tr>
-          <tr><td>Active Transportation</td><td>B+</td></tr>
-          <tr><td>Sedentary Behaviours</td><td>D</td></tr>
-          <tr><td>Physical Fitness</td><td>D</td></tr>
-          <tr><td>Sleep</td><td>C-</td></tr>
-          <tr><td>Family & Peers</td><td>INC</td></tr>
-          <tr><td>School</td><td>B</td></tr>
-          <tr><td>Community & Environment</td><td>B</td></tr>
-          <tr><td>Government</td><td>C+</td></tr>
-          <tr><td>Obesity</td><td>D-</td></tr>
-        </tbody>
-      </table>
+      <div class="indicator-card">
+        <h3>⚽ Organized Sport & Physical Activity</h3>
+        <p>Participation of children and youth in structured and organized physical activities and sports programs.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>🤸 Active Play</h3>
+        <p>Engagement of children in unstructured and active free play during leisure time.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>🚲 Active Transportation</h3>
+        <p>Proportion of children and youth who use active modes (walking, cycling) to travel to and from destinations such as school.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>📺 Sedentary Behaviours</h3>
+        <p>Time spent in sedentary screen activities such as television, video games, and online media.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>💪 Physical Fitness</h3>
+        <p>Levels of cardiorespiratory, muscular, and motor fitness measured using age-appropriate assessments.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>🌙 Sleep</h3>
+        <p>Proportion of children meeting recommended sleep duration and quality guidelines.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>👨‍👩‍👧 Family & Peers</h3>
+        <p>Influence of family and peer support on children's participation in physical activity.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>🏫 School</h3>
+        <p>Availability and quality of physical education, school facilities, and activity promotion programs.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>🏙 Community & Environment</h3>
+        <p>Access to safe, convenient, and well-designed environments that encourage active living.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>🏛 Government</h3>
+        <p>Policies, funding, and surveillance systems promoting physical activity among children and youth.</p>
+      </div>
+
+      <div class="indicator-card">
+        <h3>⚖️ Obesity</h3>
+        <p>Prevalence of overweight and obesity among children and adolescents based on national or regional data.</p>
+      </div>
     </div>
+  </section>
+
+  <section class="alliance">
+    <h2>Part of the Global Matrix Initiative</h2>
+    <p>Active Healthy Kids Pakistan is a proud member of the <a href="https://www.activehealthykids.org/5-0/" target="_blank">Active Healthy Kids Global Alliance</a>, a global network that evaluates and promotes physical activity among children and youth in over 60 countries.</p>
   </section>
 
   <footer class="site-footer">
-    <div class="footer-content">
-      <p>© 2025 Active Healthy Kids Pakistan | Hosted on GitHub Pages</p>
-    </div>
+    <p>© 2025 Active Healthy Kids Pakistan | Hosted on GitHub Pages</p>
   </footer>
 
 </body>
