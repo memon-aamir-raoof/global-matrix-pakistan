@@ -1,75 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Active Healthy Kids Pakistan</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- Header / Navigation -->
   <header class="site-header">
-    <nav class="main-nav">
+    <nav class="main-nav" role="navigation">
       <div class="logo">
+        <!-- Upload your logo at assets/images/logo.png and keep this path -->
         <a href="index.html"><img src="assets/images/logo.png" alt="AHK Pakistan Logo" /></a>
       </div>
-      <ul class="nav-list">
+
+      <ul class="nav-list" role="menubar" aria-label="Main Navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="findings.html">Findings</a></li>
         <li><a href="team.html">Team</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero / Banner Section -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-inner">
-      <h1>Active Healthy Kids Pakistan Report Card</h1>
+      <h1 id="hero-heading">Active Healthy Kids Pakistan Report Card</h1>
       <p>Assessing physical activity for children and youth in Pakistan — evidence based and globally comparable.</p>
-      <a href="findings.html" class="btn btn-primary">View Key Findings</a>
+      <a class="btn-primary" href="findings.html">View Key Findings</a>
     </div>
   </section>
 
-  <!-- Latest Announcement / Carousel (similar to HK site) -->
-  <section class="announcements">
-    <h2>Latest Announcement</h2>
-    <div class="announcement-carousel">
-      <!-- replicate carousel items with images/links -->
-      <div class="carousel-item">
-        <a href="#"><img src="assets/images/announcement1.jpg" alt="Announcement 1" /></a>
-      </div>
-      <div class="carousel-item">
-        <a href="#"><img src="assets/images/announcement2.jpg" alt="Announcement 2" /></a>
-      </div>
-      <!-- more items as needed -->
+  <section class="announcements" aria-label="Latest announcements">
+    <h2 style="text-align:center; margin-bottom:12px;">Latest Announcement</h2>
+    <div class="carousel">
+      <!-- Add announcement images in assets/images/ and update the src -->
+      <img src="assets/images/announcement1.jpg" alt="Announcement 1" />
+      <img src="assets/images/announcement2.jpg" alt="Announcement 2" />
+      <img src="assets/images/announcement3.jpg" alt="Announcement 3" />
     </div>
   </section>
 
-  <!-- Intro / Welcome & 202X Grades Snapshot -->
   <section class="introduction">
     <h2>Welcome to Active Healthy Kids Pakistan</h2>
-    <p>Established in [Year], Active Healthy Kids Pakistan collaborates with stakeholders to produce a Report Card on children's physical activity, across multiple indicators. Through expert consensus and evidence synthesis, grades are assigned to reflect performance. (Based on international guidelines.)</p>
-    
-    <div class="grades-snapshot">
-      <h3>202X Grades</h3>
+    <p style="margin-top:10px;">This report card provides grades across multiple indicators of physical activity for children and adolescents in Pakistan.</p>
+
+    <div class="grades-snapshot" aria-labelledby="grades-heading">
+      <h3 id="grades-heading" style="margin-top:12px;">202X Grades</h3>
       <table>
         <thead>
           <tr><th>Indicator</th><th>Grade</th></tr>
         </thead>
         <tbody>
-          <tr><td>Overall Physical Activity</td><td>D-**</td></tr>
-          <tr><td>Organized Sport and Physical Activity</td><td>B-</td></tr>
+          <tr><td>Overall Physical Activity</td><td>D-</td></tr>
+          <tr><td>Organized Sport & Physical Activity</td><td>B-</td></tr>
           <tr><td>Active Play</td><td>D</td></tr>
           <tr><td>Active Transportation</td><td>B+</td></tr>
           <tr><td>Sedentary Behaviours</td><td>D</td></tr>
           <tr><td>Physical Fitness</td><td>D</td></tr>
           <tr><td>Sleep</td><td>C-</td></tr>
-          <tr><td>Family and Peers</td><td>INC</td></tr>
+          <tr><td>Family & Peers</td><td>INC</td></tr>
           <tr><td>School</td><td>B</td></tr>
-          <tr><td>Community and Environment</td><td>B</td></tr>
+          <tr><td>Community & Environment</td><td>B</td></tr>
           <tr><td>Government</td><td>C+</td></tr>
           <tr><td>Obesity</td><td>D-</td></tr>
         </tbody>
@@ -77,10 +71,9 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-content">
-      <p>© 2025 Active Healthy Kids Pakistan | Based on global matrix standards</p>
+      <p>© 2025 Active Healthy Kids Pakistan | Hosted on GitHub Pages</p>
     </div>
   </footer>
 
