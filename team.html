@@ -6,143 +6,156 @@
   <title>Our Team | Active Healthy Kids Pakistan</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .team-section {
+    /* Optional: team-specific layout enhancements */
+    .team-container {
       max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .team-leader, .team-members {
-      margin-bottom: 40px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
     }
-    .member-card {
-      background: #f8f8f8;
-      border-radius: 8px;
-      padding: 15px;
+    .team-member {
+      background: #f9f9f9;
+      border-radius: 10px;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
-    .member-card img {
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    .team-member img {
       width: 120px;
       height: 120px;
-      border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 10px;
+      border-radius: 50%;
+      margin-bottom: 15px;
     }
-    .member-card h3 {
+    .team-member h3 {
       color: #006600;
-      margin: 10px 0 5px;
+      font-size: 1.2em;
+      margin-bottom: 8px;
     }
-    .member-card p {
-      font-size: 0.95rem;
+    .team-member p {
+      font-size: 0.95em;
       line-height: 1.4;
+      margin-bottom: 6px;
     }
-    .links a {
-      color: #006600;
-      font-weight: 600;
-      text-decoration: none;
-      margin: 0 5px;
+    .email, .orcid {
+      font-size: 0.85em;
+      color: #004d00;
+    }
+    .team-leader {
+      background: #eaf5ea;
+      border: 2px solid #006600;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
   <header class="site-header">
     <nav class="main-nav">
       <div class="logo">
-        <a href="index.html"><img src="assets/images/logo.png" alt="AHK Pakistan Logo"></a>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
       </div>
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="findings.html">Findings</a></li>
-        <li><a href="team.html" style="text-decoration:underline;">Team</a></li>
+        <li><a href="team.html" class="active">Team</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Team Section -->
-  <section class="team-section">
+  <!-- Main Section -->
+  <section class="team-container">
     <h2 style="text-align:center;">Our Team</h2>
+    <p style="text-align:center; max-width:800px; margin:10px auto;">
+      The <strong>Active Healthy Kids Pakistan</strong> team brings together experts in physical activity, sports science, public health, and rehabilitation from leading institutions across Pakistan and abroad.
+    </p>
 
-    <div class="team-leader">
-      <h3 style="color:#006600; margin-top:25px;">Team Leader</h3>
-      <div class="member-card">
+    <!-- Team Leader -->
+    <div class="team-grid">
+      <div class="team-member team-leader">
         <img src="assets/images/aamir-memon.jpg" alt="Aamir Raoof Memon">
-        <h3>Aamir Raoof Memon</h3>
-        <p>Assistant Professor, Peoples University of Medical and Health Sciences for Women, Nawabshah, Sindh, Pakistan.<br>
-        PhD Candidate, Victoria University, Melbourne, Australia.<br>
-        <b>Email:</b> <a href="mailto:memon.aamir.raoof@gmail.com">memon.aamir.raoof@gmail.com</a><br>
-        <b>ORCID:</b> <a href="https://orcid.org/0000-0002-3203-418X" target="_blank">0000-0002-3203-418X</a>
-        </p>
+        <h3>Dr. Aamir Raoof Memon</h3>
+        <p><em>Team Leader</em></p>
+        <p>Assistant Professor, Peoples University of Medical and Health Sciences for Women, Nawabshah, Sindh, Pakistan.</p>
+        <p>PhD Candidate, Victoria University, Melbourne, Australia.</p>
+        <p class="email">E: <a href="mailto:memon.aamir.raoof@gmail.com">memon.aamir.raoof@gmail.com</a></p>
+        <p class="orcid">ORCID: <a href="https://orcid.org/0000-0002-3203-418X" target="_blank">0000-0002-3203-418X</a></p>
+          </p>
         <div class="links">
           <a href="https://www.researchgate.net/profile/Aamir-Memon-3" target="_blank">ResearchGate</a> |
           <a href="https://scholar.google.com.pk/citations?hl=en&user=YbT-npQAAAAJ" target="_blank">Google Scholar</a>
-        </div>
+          </p>
       </div>
-    </div>
-
-    <div class="team-members">
-      <h3 style="color:#006600;">Members</h3>
-      <div class="team-grid">
-
-        <div class="member-card">
-          <img src="assets/images/zeeshan.jpg" alt="Dr. Syed Muhammad Zeeshan Hamdani">
-          <h3>Dr. Syed Muhammad Zeeshan Hamdani</h3>
-          <p>Assistant Professor, Department of Sports Sciences, Bahauddin Zakariya University, Multan, Pakistan.<br>
-          <b>Email:</b> <a href="mailto:zeeshanhamdani@bzu.edu.pk">zeeshanhamdani@bzu.edu.pk</a></p>
-        </div>
-
-        <div class="member-card">
-          <img src="assets/images/ghufran.jpg" alt="Syed Ghufran Haider">
-          <h3>Syed Ghufran Haider</h3>
-          <p>Department of Sports Sciences, Bahauddin Zakariya University, Multan, Pakistan.<br>
-          Research Associate, School of Sports Sciences, Shanxi University, China.<br>
-          <b>Email:</b> <a href="mailto:ghufranhamdani77@gmail.com">ghufranhamdani77@gmail.com</a></p>
-        </div>
-
-        <div class="member-card">
-          <img src="assets/images/ishtiaq.jpg" alt="Ishtiaq Ahmed">
-          <h3>Ishtiaq Ahmed</h3>
-          <p>PhD candidate, Vrije Universiteit Brussel (VUB), Belgium.<br>
-          <b>Email:</b> <a href="mailto:ixhtiaq8@gmail.com">ixhtiaq8@gmail.com</a></p>
-        </div>
-
-        <div class="member-card">
-          <img src="assets/images/bahadur.jpg" alt="Dr. Bahadur Ali">
-          <h3>Dr. Bahadur Ali</h3>
-          <p>Associate Professor, Peoples University of Medical and Health Sciences for Women, Nawabshah, Sindh, Pakistan.<br>
-          <b>Email:</b> <a href="mailto:bahadurali@pumhs.edu.pk">bahadurali@pumhs.edu.pk</a></p>
-        </div>
-
-        <div class="member-card">
-          <img src="assets/images/ehab.jpg" alt="Dr. Muhammad Ehab Azim">
-          <h3>Dr. Muhammad Ehab Azim</h3>
-          <p>Associate Professor, Foundation University Islamabad, Pakistan.<br>
-          <b>Email:</b> <a href="mailto:ehab@fui.edu.pk">ehab@fui.edu.pk</a></p>
-        </div>
-
-        <div class="member-card">
-          <img src="assets/images/tasleem.jpg" alt="Dr. Tasleem Arif">
-          <h3>Dr. Tasleem Arif</h3>
-          <p>Assistant Professor, The University of Haripur, Pakistan.<br>
-          <b>Email:</b> <a href="mailto:tasleem.arif@uoh.edu.pk">tasleem.arif@uoh.edu.pk</a></p>
-        </div>
-
-        <div class="member-card">
-          <img src="assets/images/rida.jpg" alt="Rida Fatima">
-          <h3>Rida Fatima</h3>
-          <p>Chongqing Medical University, China.<br>
-          <b>Email:</b> <a href="mailto:ridadoctor345@gmail.com">ridadoctor345@gmail.com</a></p>
-        </div>
-
+      </div
       </div>
+
+    <h3 style="margin-top:40px; text-align:center;">Team Members</h3>
+
+    <!-- Team Members -->
+    <div class="team-grid">
+
+      <div class="team-member">
+        <img src="assets/images/zeeshan-hamdani.jpg" alt="Dr Syed Muhammad Zeeshan Hamdani">
+        <h3>Dr. Syed Muhammad Zeeshan Hamdani</h3>
+        <p>Assistant Professor, Department of Sports Sciences, Bahauddin Zakariya University, Multan, Pakistan.</p>
+        <p class="email">E: <a href="mailto:zeeshanhamdani@bzu.edu.pk">zeeshanhamdani@bzu.edu.pk</a></p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/images/ghufran-haider.jpg" alt="Syed Ghufran Haider">
+        <h3>Syed Ghufran Haider</h3>
+        <p>Department of Sports Sciences, Bahauddin Zakariya University, Multan, Pakistan.</p>
+        <p>Research Associate, School of Sports Sciences, Shanxi University, China.</p>
+        <p class="email">E: <a href="mailto:ghufranhamdani77@gmail.com">ghufranhamdani77@gmail.com</a></p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/images/ishtiaq-ahmed.jpg" alt="Ishtiaq Ahmed">
+        <h3>Ishtiaq Ahmed</h3>
+        <p>PhD Candidate, Vrije Universiteit Brussel (VUB), Belgium.</p>
+        <p class="email">E: <a href="mailto:ixhtiaq8@gmail.com">ixhtiaq8@gmail.com</a></p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/images/bahadur-ali.jpg" alt="Dr Bahadur Ali">
+        <h3>Dr. Bahadur Ali</h3>
+        <p>Associate Professor, Peoples University of Medical and Health Sciences for Women, Nawabshah, Sindh, Pakistan.</p>
+        <p class="email">E: <a href="mailto:bahadurali@pumhs.edu.pk">bahadurali@pumhs.edu.pk</a></p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/images/ehab-azim.jpg" alt="Dr Muhammad Ehab Azim">
+        <h3>Dr. Muhammad Ehab Azim</h3>
+        <p>Associate Professor, Foundation University Islamabad, Pakistan.</p>
+        <p class="email">E: <a href="mailto:ehab@fui.edu.pk">ehab@fui.edu.pk</a></p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/images/tasleem-arif.jpg" alt="Dr Tasleem Arif">
+        <h3>Dr. Tasleem Arif</h3>
+        <p>Assistant Professor, The University of Haripur, Pakistan.</p>
+        <p class="email">E: <a href="mailto:tasleem.arif@uoh.edu.pk">tasleem.arif@uoh.edu.pk</a></p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/images/rida-fatima.jpg" alt="Rida Fatima">
+        <h3>Rida Fatima</h3>
+        <p>Chongqing Medical University, China.</p>
+        <p class="email">E: <a href="mailto:ridadoctor345@gmail.com">ridadoctor345@gmail.com</a></p>
+      </div>
+
     </div>
   </section>
 
