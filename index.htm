@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Matrix Report Card - Pakistan</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Healthy Kids Pakistan</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <img src="assets/images/logo.png" alt="Pakistan Report Card Logo" class="logo">
-      <ul>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <div class="logo">
+        <a href="index.html"><img src="assets/images/logo.png" alt="AHK Pakistan Logo" /></a>
+      </div>
+      <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="findings.html">Findings</a></li>
         <li><a href="team.html">Team</a></li>
@@ -20,14 +24,65 @@
     </nav>
   </header>
 
+  <!-- Hero / Banner Section -->
   <section class="hero">
-    <h1>Global Matrix 4.0 – Pakistan Report Card</h1>
-    <p>Assessing the physical activity of children and youth in Pakistan.</p>
-    <a href="findings.html" class="btn">View Key Findings</a>
+    <div class="hero-inner">
+      <h1>Active Healthy Kids Pakistan Report Card</h1>
+      <p>Assessing physical activity for children and youth in Pakistan — evidence based and globally comparable.</p>
+      <a href="findings.html" class="btn btn-primary">View Key Findings</a>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Pakistan Active Healthy Kids Report Card | Hosted on GitHub Pages</p>
+  <!-- Latest Announcement / Carousel (similar to HK site) -->
+  <section class="announcements">
+    <h2>Latest Announcement</h2>
+    <div class="announcement-carousel">
+      <!-- replicate carousel items with images/links -->
+      <div class="carousel-item">
+        <a href="#"><img src="assets/images/announcement1.jpg" alt="Announcement 1" /></a>
+      </div>
+      <div class="carousel-item">
+        <a href="#"><img src="assets/images/announcement2.jpg" alt="Announcement 2" /></a>
+      </div>
+      <!-- more items as needed -->
+    </div>
+  </section>
+
+  <!-- Intro / Welcome & 202X Grades Snapshot -->
+  <section class="introduction">
+    <h2>Welcome to Active Healthy Kids Pakistan</h2>
+    <p>Established in [Year], Active Healthy Kids Pakistan collaborates with stakeholders to produce a Report Card on children's physical activity, across multiple indicators. Through expert consensus and evidence synthesis, grades are assigned to reflect performance. (Based on international guidelines.)</p>
+    
+    <div class="grades-snapshot">
+      <h3>202X Grades</h3>
+      <table>
+        <thead>
+          <tr><th>Indicator</th><th>Grade</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Overall Physical Activity</td><td>D-**</td></tr>
+          <tr><td>Organized Sport and Physical Activity</td><td>B-</td></tr>
+          <tr><td>Active Play</td><td>D</td></tr>
+          <tr><td>Active Transportation</td><td>B+</td></tr>
+          <tr><td>Sedentary Behaviours</td><td>D</td></tr>
+          <tr><td>Physical Fitness</td><td>D</td></tr>
+          <tr><td>Sleep</td><td>C-</td></tr>
+          <tr><td>Family and Peers</td><td>INC</td></tr>
+          <tr><td>School</td><td>B</td></tr>
+          <tr><td>Community and Environment</td><td>B</td></tr>
+          <tr><td>Government</td><td>C+</td></tr>
+          <tr><td>Obesity</td><td>D-</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>© 2025 Active Healthy Kids Pakistan | Based on global matrix standards</p>
+    </div>
   </footer>
+
 </body>
 </html>
