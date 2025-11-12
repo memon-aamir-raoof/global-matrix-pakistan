@@ -65,50 +65,26 @@
       margin-bottom: 20px;
     }
 
-    /* Overall Grade special style */
+ /* Style for Overall Grade bar */
 .overall-grade {
-  background-color: #004d00; /* Dark green background */
-  color: #ffffff; /* White text */
+  background-color: #004d00; /* dark green background */
+  color: white; /* white text for both labels and grade */
+  padding: 12px 20px;
+  font-size: 1.2rem;
   font-weight: bold;
-  font-size: 1.3rem;
-  padding: 14px 20px;
-  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-}
-
-/* Ensure the grade badge matches the dark background */
-.overall-grade .grade {
-  background-color: #ffffff; /* White badge */
-  color: #004d00; /* Dark green text */
-  border: 1px solid #ffffff;
-}
-
-/* Make Overall Grade text white */
-.overall-grade {
-  background-color: #004d00; /* Dark green background */
-  color: white; /* White text */
-  font-weight: bold;
-  font-size: 1.3rem;
-  padding: 14px 20px;
   border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
 }
 
-/* Make the grade badge readable on dark background */
+/* Make the grade letter white as well */
 .overall-grade .grade {
-  background-color: white;
-  color: #004d00;
-  border: 1px solid #004d00;
+  background: white; /* optional – if you want a white box */
+  color: #004d00; /* dark green text inside the box */
+  border: 1px solid white;
 }
-  
-    
+
     /* Findings Container */
     .findings-container {
       max-width: 1000px;
