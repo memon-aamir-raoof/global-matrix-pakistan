@@ -25,7 +25,7 @@ ul { list-style: none; }
 }
 .logo img {
     display: block;                   /* Removes extra white space below image */
-    height: 52px;                     /* Keeps your current size */
+    height: 150px;                     /* Keeps your current size */
     width: auto;                       /* Preserve aspect ratio */
     background-color: transparent;    /* Ensure image background doesn’t override */
     vertical-align: middle;           /* Aligns nicely with nav text if needed */
