@@ -7,7 +7,11 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
 /* Header & Navigation */
-.site-header { background-color: #006600; padding: 12px 20px; }
+.site-header {
+  background-color: #004d00; /* Dark green header for all pages */
+  padding: 12px 20px;
+  color: white;
+}
 .main-nav { display: flex; align-items: center; justify-content: space-between; max-width: 1100px; margin: 0 auto; }
 .logo img { height: 52px; }
 .nav-list { display: flex; gap: 18px; align-items: center; }
@@ -71,7 +75,13 @@ ul { list-style: none; }
 .about-section p { margin-bottom: 16px; line-height: 1.6; }
 
 /* Footer */
-.site-footer { background: #222; color: #fff; padding: 18px; text-align: center; margin-top: 24px; }
+.site-footer {
+  background-color: #e0e0e0; /* Light grey footer for all pages */
+  color: #222;               /* Dark text for contrast */
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
 
 /* Responsive */
 @media (max-width: 700px) {
