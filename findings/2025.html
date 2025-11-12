@@ -3,8 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Findings | Active Healthy Kids Pakistan</title>
+  <title>Active Healthy Kids Pakistan</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; }
+
+    /* Header nav links bold and white */
+    .site-header { background-color: #000; color: white; padding: 10px 0; }
+    .main-nav { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .nav-list { list-style: none; display: flex; gap: 20px; }
+    .nav-list li a { color: white; text-decoration: none; font-weight: bold; }
+    .nav-list li a.active { text-decoration: underline; }
+
+    /* Hero Section */
+    .hero { background: linear-gradient(135deg, #006400, #004d00); color: white; text-align: center; padding: 80px 20px; }
+    .hero h1 { font-size: 2em; font-weight: bold; margin-bottom: 10px; }
+    .hero p { font-weight: bold; margin-bottom: 20px; }
+
+    /* Findings container */
+    .findings-container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    .indicator-list { display: flex; flex-direction: column; gap: 15px; }
+    .indicator { border: 1px solid #006600; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .indicator-header { background-color: #006600; color: white; padding: 15px 20px; font-size: 1.2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .indicator-header span.grade { background: #fff; color: #006600; padding: 3px 8px; border-radius: 4px; font-weight: bold; }
+    .indicator-content { display: none; padding: 20px; background: #f8f8f8; animation: fadeIn 0.3s ease-in-out; }
+    .indicator-content.active { display: block; }
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    .indicator-content h3 { color: #004d00; margin-top: 0; }
+    .indicator-content ul { margin: 10px 0 20px; padding-left: 20px; }
+    .indicator-content p { line-height: 1.6; }
+  </style>
 </head>
 <body>
 
@@ -12,11 +40,11 @@
   <header class="site-header">
     <nav class="main-nav">
       <div class="logo">
-        <a href="index.html"><img src="assets/images/logo.jpg" alt="AHK Pakistan Logo" /></a>
+        <a href="index.html"><img src="assets/images/logo.jpg" alt="AHK Pakistan Logo" height="60" /></a>
       </div>
       <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="2025.html" class="active">Findings</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="findings.html">Findings</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -24,15 +52,15 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero hero-dark">
+  <!-- Hero section -->
+  <section class="hero">
     <div class="hero-inner">
       <h1>Pakistan Report Card 2025</h1>
       <p>Summary of grades and key findings across all 10 Global Matrix indicators.</p>
     </div>
   </section>
 
-  <!-- Findings Container -->
+  <!-- Findings container -->
   <section class="findings-container">
     <div class="indicator-list">
 
@@ -78,7 +106,7 @@
         </div>
         <div class="indicator-content">
           <h3>Benchmark</h3>
-          <p>Proportion of children engaging in unstructured active play several times per week.</p>
+          <p>Proportion of children who engage in unstructured active play several times per week.</p>
           <h3>Key Findings</h3>
           <ul>
             <li>Traditional games are common but declining in urban settings.</li>
@@ -113,7 +141,7 @@
           <p>Proportion of children spending less than 2 hours daily on recreational screen time.</p>
           <h3>Key Findings</h3>
           <ul>
-            <li>Screen time is increasing rapidly in urban populations.</li>
+            <li>Screen time increasing rapidly in urban populations.</li>
           </ul>
         </div>
       </div>
@@ -161,7 +189,7 @@
           <p>Proportion of schools offering regular physical education classes and activity opportunities.</p>
           <h3>Key Findings</h3>
           <ul>
-            <li>PE classes exist in policy but are not consistently implemented.</li>
+            <li>PE classes exist in policy but not consistently implemented.</li>
           </ul>
         </div>
       </div>
@@ -193,7 +221,7 @@
           <p>Evidence of leadership, policies, and investments supporting physical activity for children and youth.</p>
           <h3>Key Findings</h3>
           <ul>
-            <li>Recent national policies acknowledge physical activity, but implementation remains limited.</li>
+            <li>Recent national policies acknowledge physical activity but implementation remains limited.</li>
           </ul>
         </div>
       </div>
@@ -201,12 +229,10 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <p>© 2025 Active Healthy Kids Pakistan | Hosted on GitHub Pages</p>
   </footer>
 
-  <!-- Toggle Script -->
   <script>
     function toggleIndicator(element) {
       const content = element.nextElementSibling;
