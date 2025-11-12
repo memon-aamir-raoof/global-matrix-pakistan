@@ -1,0 +1,173 @@
+/* ------------------------------------- */
+/* assets/css/style.css - Full Stylesheet */
+/* Active Healthy Kids Pakistan */
+/* ------------------------------------- */
+
+/* Basic Reset & Typography */
+* { box-sizing: border-box; }
+body, h1, h2, h3, p, ul, table { margin: 0; padding: 0; font-family: "Helvetica Neue", Arial, sans-serif; color: #222; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* Header & Navigation */
+.site-header {
+  background-color: #004d00; /* Dark green header for all pages */
+  padding: 12px 20px;
+  color: white;
+}
+.main-nav { display: flex; align-items: center; justify-content: space-between; max-width: 1100px; margin: 0 auto; }
+
+/* Logo Styling - Blending Green */
+.logo {
+    display: inline-block;            /* Keeps logo in flow */
+    background-color: #004d00;        /* Same as header green to blend */
+    padding: 0;                        /* Remove extra spacing */
+}
+.logo img {
+    display: block;                   /* Removes extra white space below image */
+    height: 52px;                     /* Keeps your current size */
+    width: auto;                       /* Preserve aspect ratio */
+    background-color: transparent;    /* Ensure image background doesn’t override */
+    vertical-align: middle;           /* Aligns nicely with nav text if needed */
+}
+
+.nav-list { display: flex; gap: 18px; align-items: center; }
+.nav-list a { color: #fff; font-weight: 600; padding: 6px 8px; }
+.nav-list a.active { text-decoration: underline; }
+
+/* Hero Section */
+.hero { text-align: center; padding: 80px 18px; }
+.hero h1 { font-size: 2.2rem; margin-bottom: 8px; }
+.hero p { font-size: 1.05rem; margin-bottom: 14px; }
+.btn-primary { background-color: #006600; color: #fff; padding: 10px 18px; border-radius: 6px; display: inline-block; transition: background 0.2s; }
+.btn-primary:hover { background-color: #009900; }
+
+/* Hero Variants */
+.hero-light { background: #eaf5ea; color: #003300; }
+.hero-dark { background: linear-gradient(135deg, #006400, #004d00); color: #fff; }
+
+/* Flag Section */
+.flag-section { text-align: center; background: #fff; padding: 100px 0 40px 0; }
+.flag-section img { display: inline-block; max-width: 90%; height: auto; }
+
+/* Announcements Section */
+.announcements { padding: 36px 18px; background: #fff; text-align: center; }
+.carousel { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; }
+.carousel img { height: 170px; width: auto; border-radius: 6px; object-fit: cover; }
+.announcement-text { max-width: 800px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6; }
+
+/* Intro & Grades */
+.introduction { padding: 36px 18px; max-width: 1100px; margin: 0 auto; }
+.grades-snapshot { margin-top: 18px; overflow-x: auto; }
+.grades-snapshot table { width: 100%; border-collapse: collapse; min-width: 600px; }
+.grades-snapshot th, .grades-snapshot td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
+.grades-snapshot th { background: #f7f7f7; font-weight: 700; }
+
+/* Indicators Section */
+.indicators, .findings-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+.indicators h2, .findings-container h2 { text-align: center; margin-bottom: 25px; color: #004d00; }
+.indicator-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+
+/* Indicator Cards (Home page) */
+.indicator-card {
+  background: white;
+  border-left: 6px solid #006400;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  transition: transform 0.2s;
+}
+.indicator-card:hover { transform: translateY(-4px); }
+.indicator-card h3 { color: #006400; margin-bottom: 8px; }
+.indicator-card p { font-size: 0.95rem; line-height: 1.5; }
+
+/* Findings Page Indicators */
+.indicator-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.indicator {
+  border: 1px solid #006600;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.indicator-header {
+  background-color: #006600;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.indicator-header span.grade {
+  background: #fff;
+  color: #006600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.indicator-content {
+  display: none;
+  padding: 20px;
+  background: #f8f8f8;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.indicator-content.active { display: block; }
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+.indicator-content h3 { color: #004d00; margin-top: 0; }
+.indicator-content ul { margin: 10px 0 20px; padding-left: 20px; }
+.indicator-content p { line-height: 1.6; }
+
+/* AHK Alliance Section */
+.alliance { background: #eaf5ea; text-align: center; padding: 40px 20px; }
+.alliance a { color: #006400; font-weight: 600; text-decoration: none; }
+.alliance a:hover { text-decoration: underline; }
+
+/* Team Section */
+.team-section { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+.team-leader { text-align: center; margin-bottom: 60px; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.member-card {
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.member-card:hover { transform: translateY(-5px); }
+.member-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
+.member-card h3 { color: #006600; margin: 10px 0 5px; }
+.member-card p { font-size: 0.95rem; line-height: 1.4; }
+.links a { color: #006600; font-weight: 600; text-decoration: none; margin: 0 5px; }
+
+/* About Section */
+.about-section { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+.about-section h2 { color: #006600; margin-bottom: 20px; }
+.about-section h3 { margin-top: 30px; color: #004d00; }
+.about-section p { margin-bottom: 16px; line-height: 1.6; }
+
+/* Footer */
+.site-footer {
+  background-color: #e0e0e0;
+  color: #222;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .main-nav { flex-direction: column; gap: 12px; }
+  .hero-inner h1 { font-size: 1.6rem; }
+  .team-grid { grid-template-columns: 1fr; }
+  .indicator-header { font-size: 1rem; }
+}
