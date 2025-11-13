@@ -6,45 +6,97 @@
   <title>Active Healthy Kids Pakistan</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-   
-    .main-nav {
-      max-width: 1200px;
-      margin: 0 auto;
+    /* Header styling */
+    .site-header {
+      background-color: #ffffff; /* white background */
+      padding: 10px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 20px;
-      gap: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
 
     .logo img {
-      height: 100px;
+      height: 80px;
       width: auto;
       display: block;
+      background-color: transparent;
     }
 
-    .title-image img {
-      height: 70px; /* adjust to fit nicely beside logo */
-      width: auto;
-      display: block;
+    .site-title {
+      font-size: 1.5rem;
+      color: #006400; /* dark green */
+      font-weight: bold;
+      margin: 0;
     }
 
     .nav-list {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 25px;
       margin: 0;
       padding: 0;
     }
 
-    .nav-list li a {
-      color: white;
+    .nav-list a {
       text-decoration: none;
-      font-weight: bold;
+      color: #006400; /* dark green */
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
-    .nav-list li a.active {
-      text-decoration: underline;
+    .nav-list a:hover,
+    .nav-list a.active {
+      color: #228B22; /* lighter green on hover */
+    }
+
+    /* Hero section styling */
+    .hero {
+      position: relative;
+      text-align: center;
+      color: #ffffff;
+      padding: 100px 20px;
+      background: url("assets/images/hero-photo.jpg") no-repeat center center/cover;
+    }
+
+    .hero-inner {
+      background-color: rgba(255, 255, 255, 0.85);
+      display: inline-block;
+      padding: 40px;
+      border-radius: 10px;
+      color: #333;
+    }
+
+    #hero-heading {
+      color: #006400; /* dark green text */
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-primary {
+      background-color: #006400;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #228B22;
     }
   </style>
 </head>
@@ -53,17 +105,14 @@
   <!-- Header / Navigation -->
   <header class="site-header">
     <nav class="main-nav" role="navigation">
-      <div class="logo">
-        <a href="index.html">
-          <img src="assets/images/final_logo_transparent.png" alt="Logo" style="background-color: transparent;">
-        </a>
+      <div class="logo-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/final_logo_transparent.png" alt="Logo">
+          </a>
+        </div>
+        <h1 class="site-title">Active Healthy Kids Pakistan</h1>
       </div>
-
-      <!-- Urdu Title Image (added here) -->
-      <div class="title-image">
-        <img src="assets/images/Active_Healthy_Kid_Pakistan_Title_Urdu_transparent.png" alt="Active Healthy Kids Pakistan Urdu Title">
-      </div>
-
       <ul class="nav-list" role="menubar" aria-label="Main Navigation">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="findings.html">Findings</a></li>
@@ -73,11 +122,6 @@
       </ul>
     </nav>
   </header>
-
-  <!-- Flag Section -->
-  <section class="flag-section">
-    <img src="assets/images/pakistan-flag.gif" alt="Waving Flag of Pakistan" />
-  </section>
 
   <!-- Hero Section -->
   <section class="hero" aria-labelledby="hero-heading">
